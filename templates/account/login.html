@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>login</title>
+        <link rel="stylesheet" href="{% static 'css/log_cs.css' %}">
+    </head>
+      <body>
+
+        <!-- FORMULAIRE DE CONNEXION -->
+   <div class="card">
+       <h2>Login Form</h2>
+
+           <!-- SE CONNECTER / S'INSCRIRE -->
+
+           <!-- FORMULAIRE -->
+      <form action="." method="post" class="form login">
+        {% csrf_token %}
+        <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>               
+       
+
+           <!-- MOT DE PASSE OUBLIE ? -->
+
+
+           <!-- BOUTTON LOGIN -->
+           
+           <input type="submit" value="Sign In">
+
+           <!-- PIED DE LA CARD -->
+      </form>
+       </div>
+   </div>
+       
+</body>
+</html>

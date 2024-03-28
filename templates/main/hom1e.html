@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta content="text/html" charset="utf-8">
+        <meta name="robots" content="NONE,NOARCHIVE">
+        <title>home</title>
+        <!-- style css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href=https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css>
+
+    </head>
+    <body class="bg-gray-50">
+        {%if requests %}
+        {% for request in requests %}
+        <p> Фамилия Родителя:{{request}} Создание запроса:{{request.created_at}} Вход в:{{request.entered_at}}</p>
+        {% endfor %}
+        {% endif %}
+        <section class="relative pb-20">
+        <div class="container">
+
+        </div>
+        </div><!-- Container End -->
+        </section>
+    </body>
+</html>

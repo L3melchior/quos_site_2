@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta content="text/html" charset="utf-8">
+        <meta name="robots" content="NONE,NOARCHIVE">
+        <title>Рекрутинг</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'css/INDEX-4000.ico' %}">
+        <link rel="stylesheet" href="{% static 'css/rec.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- style css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href=https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css>
+
+    </head>
+    <body class="align" style="margin-bottom: 0;">
+        <div style="background: #2e3138; color: #9c9ea2; width: 65%; height: 95%; margin-left: auto; margin-right: auto; min-height: 80vh;">
+            <form id="request" class="main_form" action="." method="post" class="topBefore">
+                {% csrf_token %}
+                <a style="color: #ffffff; text-align: center;">EVE SETTINGS FOR USERS:</a>
+                <h1>EVE SECRET KEY</h1>
+                <input style="border: solid 1px #363b41 !important;" type="text" placeholder="    Eve secret key" name="eve_sec_key" value={{eve_sec_key}}>
+                <br></br>
+                <h1>EVE ACCESS TOKEN</h1>
+                <input style="border: solid 1px #363b41 !important;" type="text" placeholder="    Eve access token" name="eve_access_token" value={{eve_access_token}}>
+                <br></br>
+                <h1>EVE ID</h1>
+                <input style="border: solid 1px #363b41 !important;" type="text" placeholder="    Eve ID" name="eve_id" value={{eve_id}}>
+                <br></br>
+                <h1>EVE AUTHENTICATION CODE</h1>
+                <input style="border: solid 1px #363b41 !important;" type="text" placeholder="    Eve authentication code" name="eve_auth_code" value={{eve_auth_code}}>
+                <br></br>
+                <h1>EVE REFRESH TOKEN</h1>
+                <input style="border: solid 1px #363b41 !important;" type="text" placeholder="    Eve refresh token" name="eve_refresh_token" value={{eve_refresh_token}}>
+                <br></br>
+
+                <input  id="submit" class="submit" style="width: 100%; background-color: #272727;" type="submit" value="СОХРАНИТЬ НАСТРОЙКИ" name="update_eve_setting">
+                <br></br>
+                <input  id="submit" class="submit" style="width: 100%; background-color: #272727;" type="submit" value="НАСТРОЙКИ ПОЧТЫ" name="mail_setting">
+                <br></br>
+                <input  id="submit" class="submit" style="width: 100%; background-color: #272727;" type="submit" value="ВПЕРЁД ПО ДЕСТУ!" name="next_dest">
+            </form>
+        </div>
+     <!--  footer -->
+     <footer>
+        <div class="footer">
+           <div class="container">
+              <div class="row">
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="infoma text_align_left">
+                       <h3></h3>
+                       <ul class="commodo">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="infoma">
+                       <h3>ДРУГИЕ ВКЛАДКИ</h3>
+                       <ul class="commodo">
+                        <li><a style="color: #ffffff; text-align: center;" href='{% url "sended_nicks" %}'>База данных</a></li>
+                        <li><a style="color: #ffffff; text-align: center;" href='{% url "user_setting" %}'>Настройки</a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                        <li><a></a></li>
+                     </ul>
+                    </div>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="infoma">
+                       <h3>ТЕХ. ПОДДЕРЖКА</h3>
+                       <ul class="commodo">
+                          <li><a>Discord: orssee </a></li>
+                          <li><a>Mail: matthew.tsyb25@gmail.com </a></li>
+                          <li><a>In-game: Kuos lian </a></li>
+                          <li><a></a></li>
+                          <li><a></a></li>
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="infoma text_align_left">
+                       <h3></h3>
+                       <ul class="commodo">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+     <!-- end footer -->
+    </body>
+</html>
